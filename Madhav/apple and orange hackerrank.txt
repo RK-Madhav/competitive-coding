@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+  int s,t,a,b,m,n,i,j,app=0,ora=0;
+  scanf("%d %d",&s,&t);
+  scanf("%d %d",&a,&b);
+  scanf("%d %d",&m,&n);
+  int ap[m],or[n];
+  for(i=0;i<m;i++)
+  {
+    scanf("%d",&ap[i]);
+  }
+  for(j=0;j<n;j++)
+  {
+    scanf("%d",&or[j]);
+  }
+  for(i=0;i<m;i++)
+  {
+    ap[i]+=a;
+    if(ap[i]>=s&&ap[i]<=t)
+    {
+      app++;
+    }
+  }
+  for(j=0;j<n;j++)
+  {
+    or[j]+=b;
+    if(or[j]>=s&&or[j]<=t)
+    {
+      ora++;
+    }
+  }
+  printf("%d\n",app);
+  printf("%d",ora);
+  return 0;
+}
